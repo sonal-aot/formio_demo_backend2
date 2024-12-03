@@ -4,7 +4,7 @@
 const sampleData3 = require('../sampleData3');
 
 const getData = (req, res) => {
-  const appointmentNumber = parseInt(req.query.appointmentNumber, 10);
+  const { appointmentNumber } = req.query;
   const datas = sampleData3;
   const data = datas.find(d => d.appointmentNumber === appointmentNumber)
 
